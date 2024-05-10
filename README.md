@@ -8,16 +8,16 @@ Steps :
 
 Follow OpenLane2 documentation : https://openlane2.readthedocs.io/en/latest/getting_started/newcomers/index.html 
 
--sudo apt-get update
--sudo apt-get upgrade
--git clone https://github.com/efabless/openlane2/ 
--sudo apt install make
--sudo apt install python3-pip
--sudo apt install python3.10-venv
--sudo apt install make 
--sudo apt install nix-bin
--sudo make
--sudo nix-shell --pure ~/openlane2/shell.nix  (It will take a long time )
+- sudo apt-get update
+- sudo apt-get upgrade
+- git clone https://github.com/efabless/openlane2/ 
+- sudo apt install make
+- sudo apt install python3-pip
+- sudo apt install python3.10-venv
+- sudo apt install make 
+- sudo apt install nix-bin
+- sudo make
+- sudo nix-shell --pure ~/openlane2/shell.nix  (It will take a long time )
 
 If you want test your installation you can use : openlane --log-level ERROR --condensed --show-progress-bar --smoke-test
 
