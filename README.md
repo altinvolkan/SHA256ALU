@@ -23,10 +23,11 @@ Steps :
    nix-shell --pure ~/openlane2/shell.nix" (Documentation - Running the default flow PM32 Example)\\
 
    Create project folder
-   mkdir -p ~/my_designs/SHA256ALU
+   mkdir -p SHA256ALU
    git clone https://github.com/anildev-09/SHA256ALU
-   openlane --pdk sky130A ~/my_designs/sha256_project/config.json
+   openlane -p sky130A ~/SHA256ALU/SHA256ALU/config.json
 
+   You can look files and folders with "ls" command. When you look, you can see the "runs" folder. You can navigate to it with "cd runs" command and you use "ls" command again. Please inspect the folders well. There's everything you need (floorplans, klayout, openroad etc.).
    That's all! You've completed all the process!
 
 
