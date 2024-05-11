@@ -21,6 +21,8 @@ Follow OpenLane2 documentation : https://openlane2.readthedocs.io/en/latest/gett
 
 If you want test your installation you can use : openlane --log-level ERROR --condensed --show-progress-bar --smoke-test
 
+You can cancel any process in Linux with "Control + C" command. Sometimes you need to try few times. 
+
 ////////////////"Tip"\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 Double-checking: are you inside a nix-shell? Your terminal prompt should look like this:
@@ -30,11 +32,18 @@ If not, enter the following command in your terminal:
 nix-shell --pure ~/openlane2/shell.nix" 
 //////////////(Documentation - Running the default flow PM32 Example)\\\\\\\\\\\\\\\\\\\\
 
-Create project folder 
-- mkdir -p SHA256ALU
-- git clone https://github.com/anildev-09/SHA256ALU openlane -p sky130A ~/SHA256ALU/SHA256ALU/config.json
+
+openlane -p sky130A ~/SHA256ALU/SHA256ALU/config.json
 
 You can look files and folders with "ls" command. When you look, you can see the "runs" folder. You can navigate to it with "cd runs" command and you use "ls" command again. Please inspect the folders well. There's everything you need (floorplans, klayout, openroad etc.). That's all! You've completed all the process!
+You can create folder called SHA256ALU (mkdir -p SHA256ALU) and navigate to it (cd SHA256ALU).
+In nix-shell wget, git etc. won't work. You must navigate to folder, create a file with /bin/nano command. Example /bin/nano sha256.v
+
+You can exit from nano with "Ctrl+X" combination. It will ask for save to file, you can hit "Y" key. 
+Repeat! 
+
+openlane -p sky130A ~/SHA256ALU/config.json
+
 
 ----NERD STUFF----
 
