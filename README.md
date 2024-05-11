@@ -18,6 +18,13 @@ Follow OpenLane2 documentation : https://openlane2.readthedocs.io/en/latest/gett
 - sudo apt install nix-bin
 - sudo make
 - sudo nix-shell --pure ~/openlane2/shell.nix  (It will take a long time )
+- mkdir -p ~/my_designs
+- cd ~/my_designs/
+- mkdir -p
+- /bin/git clone https://github.com/altinvolkan/SHA256ALU.git
+- cd SHA256ALU/
+- openlane -p sky130A ~/my_designs/SHA256ALU/config.json
+  
 
 If you want test your installation you can use : openlane --log-level ERROR --condensed --show-progress-bar --smoke-test
 
@@ -33,16 +40,15 @@ nix-shell --pure ~/openlane2/shell.nix"
 //////////////(Documentation - Running the default flow PM32 Example)\\\\\\\\\\\\\\\\\\\\
 
 
-openlane -p sky130A ~/SHA256ALU/SHA256ALU/config.json
+openlane -p sky130A ~/my_designs/SHA256ALU/config.json
 
 You can look files and folders with "ls" command. When you look, you can see the "runs" folder. You can navigate to it with "cd runs" command and you use "ls" command again. Please inspect the folders well. There's everything you need (floorplans, klayout, openroad etc.). That's all! You've completed all the process!
-You can create folder called SHA256ALU (mkdir -p SHA256ALU) and navigate to it (cd SHA256ALU).
-In nix-shell wget, git etc. won't work. You must navigate to folder, create a file with /bin/nano command. Example /bin/nano sha256.v
+
 
 You can exit from nano with "Ctrl+X" combination. It will ask for save to file, you can hit "Y" key. 
 Repeat! 
 
-openlane -p sky130A ~/SHA256ALU/config.json
+
 
 
 ----NERD STUFF----
