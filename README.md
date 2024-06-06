@@ -10,7 +10,6 @@ Follow OpenLane2 documentation : https://openlane2.readthedocs.io/en/latest/gett
 - sudo apt-get update
 - sudo apt-get upgrade
 - git clone https://github.com/efabless/openlane2/ && cd openlane2
-- sudo apt install make
 - sudo apt install python3-pip
 - sudo apt install python3.10-venv
 - sudo apt install make 
@@ -19,7 +18,6 @@ Follow OpenLane2 documentation : https://openlane2.readthedocs.io/en/latest/gett
 - sudo nix-shell --pure ~/openlane2/shell.nix  (It will take a long time )
 - mkdir -p ~/my_designs
 - cd ~/my_designs/
-- mkdir -p
 - /bin/git clone https://github.com/altinvolkan/SHA256ALU.git
 - cd SHA256ALU/
 - openlane -p sky130A ~/my_designs/SHA256ALU/config.json
